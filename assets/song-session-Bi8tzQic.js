@@ -1,0 +1,1 @@
+var e={current:null,pendingTake:!1};export{e as t};

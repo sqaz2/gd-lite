@@ -1,0 +1,5 @@
+Mediabunny 1.55.5 — Copyright (c) 2026-present, Vanilagy and contributors.
+Licensed under Mozilla Public License 2.0; see LICENSE.txt.
+Modified file: media-sink.ts, available in this directory.
+Generative.download changes: both sample-iterator return methods synchronously close native AVC decoders without custom codecs or alpha, before returning. This prevents overlap with the next clip during a canceled EOF flush.
+Unmodified upstream package and remaining source: https://www.npmjs.com/package/mediabunny/v/1.55.5

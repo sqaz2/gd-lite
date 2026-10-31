@@ -1,0 +1,27 @@
+{
+  "name": "generative.download",
+  "short_name": "gen.download",
+  "description": "Private browser audio repair and eight-track editing.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "share_target": {
+    "action": "/share-file",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": { "files": [{ "name": "files", "accept": ["audio/*", "video/*"] }] }
+  },
+  "display": "standalone",
+  "background_color": "#0a0a0d",
+  "theme_color": "#0a0a0d",
+  "orientation": "any",
+  "categories": ["music", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

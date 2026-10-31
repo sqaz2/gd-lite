@@ -1,0 +1,16 @@
+SoundTouchJS 2.1.1
+
+This application uses unmodified @soundtouchjs/core 2.1.1 and its dependency
+@soundtouchjs/interpolation-strategy-lanczos 2.1.1, by Steve Cutter Blades
+and contributors, under the Mozilla Public License 2.0.
+
+Source: https://github.com/cutterbl/SoundTouchJS
+Exact published packages and source maps:
+https://www.npmjs.com/package/@soundtouchjs/core/v/2.1.1
+https://www.npmjs.com/package/@soundtouchjs/interpolation-strategy-lanczos/v/2.1.1
+
+Mozilla Public License Version 2.0
+
+This package is licensed under the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+Full license text: https://www.mozilla.org/en-US/MPL/2.0/

@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "generated": "2026-09-30",
+  "format": "image/webp",
+  "totalBytes": 1661602,
+  "assets": [
+    {
+      "id": "eq",
+      "src": "/plugin-art/eq.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 82746,
+      "sha256": "9ac519cdd6fd0d82d7b0c5ef9a21a3f5b156396e19e8d1ccc76030ed0d1f9dfd"
+    },
+    {
+      "id": "compressor",
+      "src": "/plugin-art/compressor.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 83032,
+      "sha256": "aa0153f6e3b09f33183ec94b1867c21e04d4a05bcbbdd3fa1cff6117e9f21310"
+    },
+    {
+      "id": "noise-gate",
+      "src": "/plugin-art/noise-gate.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 45934,
+      "sha256": "c57e4d87f696429e4864541ecca4a2b96e2431837fe0e3a6cf33de9aa2db33c2"
+    },
+    {
+      "id": "phaser",
+      "src": "/plugin-art/phaser.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 130114,
+      "sha256": "bc02e7e2825f7da072ddd6227b9ec38e9279e3bceea195530791e74294323289"
+    },
+    {
+      "id": "reverb",
+      "src": "/plugin-art/reverb.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 67040,
+      "sha256": "17c3b31cfbe35daca5bec20842d32e4dcd3b1d961a8206fb8a3ae432f2cad863"
+    },
+    {
+      "id": "delay",
+      "src": "/plugin-art/delay.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 75112,
+      "sha256": "d70e1a22a4e4a4dc4b3fa6e193260d955b733ba04ef1d767a920abc013da7c26"
+    },
+    {
+      "id": "mixer",
+      "src": "/plugin-art/mixer.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 71126,
+      "sha256": "9219983b21666810d06a6c937004ce91e3a553925522ac571015d92225439d74"
+    },
+    {
+      "id": "drive",
+      "src": "/plugin-art/drive.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 88430,
+      "sha256": "9009d9f748a5d78838032dcdcbe7d4f6972f93088f442d3ab89e318caa29d964"
+    },
+    {
+      "id": "interblend",
+      "src": "/plugin-art/interblend.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 94428,
+      "sha256": "7d7db05e741b2b33d391087728e8bf99bd1eb956f14f889f80a610f6d97f1ab3"
+    },
+    {
+      "id": "versions",
+      "src": "/plugin-art/versions.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 117138,
+      "sha256": "89007f4e40f46b5bb984df8dd504baa07f6c24dfcc89e1fd3595cc87aea64758"
+    },
+    {
+      "id": "mastering",
+      "src": "/plugin-art/mastering.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 261630,
+      "sha256": "f5d2c99c6c019eb32015fcc3b66d6a69d7be4256e4bc0e6519be4897aa952bbe"
+    },
+    {
+      "id": "goodify",
+      "src": "/plugin-art/goodify.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 176848,
+      "sha256": "0a88708593e2330c0bec83ec12e5bba8148ae18adb63cb7b8e0c9b0730463bab"
+    }
+  ]
+}

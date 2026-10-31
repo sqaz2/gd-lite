@@ -1,0 +1,1 @@
+function e(e){return typeof crypto<`u`&&`randomUUID`in crypto?e+`-`+crypto.randomUUID():e+`-`+Date.now().toString(36)+`-`+Math.random().toString(36).slice(2)}function t(e){return e.replace(/\.[^.]+$/,``).normalize(`NFKD`).replace(/[^\p{L}\p{N}._ -]+/gu,``).trim().replace(/\s+/g,`-`).replace(/-+/g,`-`).slice(0,80)||`audio`}export{t as n,e as t};

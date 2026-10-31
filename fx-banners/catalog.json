@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "basePath": "/plugin-art",
+  "template": {
+    "width": 1024,
+    "height": 1536,
+    "aspect": "2:3",
+    "format": "webp",
+    "cardCrop": "center top",
+    "controls": "HTML controls overlay the faceplate; no baked-in controls or labels"
+  },
+  "plugins": [
+    {
+      "id": "eq",
+      "name": "EQ",
+      "blurb": "Shape lows, mids and highs",
+      "banner": "/plugin-art/eq.webp",
+      "open": {
+        "kind": "row-fx",
+        "section": "eq"
+      },
+      "ui": [
+        "AudioRowEffects",
+        "RecordingEq",
+        "MixEffects"
+      ]
+    },
+    {
+      "id": "compressor",
+      "name": "Compressor",
+      "blurb": "Even out dynamics",
+      "banner": "/plugin-art/compressor.webp",
+      "open": {
+        "kind": "row-fx",
+        "section": "compressor"
+      },
+      "ui": [
+        "AudioRowEffects",
+        "RecordingSound"
+      ]
+    },
+    {
+      "id": "noise-gate",
+      "name": "Noise cleanup",
+      "blurb": "Quiet the gaps",
+      "banner": "/plugin-art/noise-gate.webp",
+      "open": {
+        "kind": "row-fx",
+        "section": "noise"
+      },
+      "ui": [
+        "AudioRowEffects",
+        "RecordingSound"
+      ]
+    },
+    {
+      "id": "phaser",
+      "name": "Phaser",
+      "blurb": "Movement & texture",
+      "banner": "/plugin-art/phaser.webp",
+      "open": {
+        "kind": "panel",
+        "panel": "phaser"
+      },
+      "ui": [
+        "PhaserPanel",
+        "PluginsPanel"
+      ]
+    },
+    {
+      "id": "reverb",
+      "name": "Reverb",
+      "blurb": "Shared rooms & plates",
+      "banner": "/plugin-art/reverb.webp",
+      "open": {
+        "kind": "panel",
+        "panel": "eq",
+        "target": "returns",
+        "returnKind": "reverb"
+      },
+      "ui": [
+        "MixEffects"
+      ]
+    },
+    {
+      "id": "delay",
+      "name": "Delay",
+      "blurb": "Beat-synced echoes",
+      "banner": "/plugin-art/delay.webp",
+      "open": {
+        "kind": "panel",
+        "panel": "eq",
+        "target": "returns",
+        "returnKind": "delay"
+      },
+      "ui": [
+        "MixEffects"
+      ]
+    },
+    {
+      "id": "mixer",
+      "name": "EQ & mixer",
+      "blurb": "Tracks, master & sends",
+      "banner": "/plugin-art/mixer.webp",
+      "open": {
+        "kind": "panel",
+        "panel": "eq"
+      },
+      "ui": [
+        "EqualizerPanel",
+        "MixEffects",
+        "PluginsPanel"
+      ]
+    },
+    {
+      "id": "drive",
+      "name": "Drive",
+      "blurb": "Character & distortion",
+      "banner": "/plugin-art/drive.webp",
+      "open": {
+        "kind": "plugin",
+        "plugin": "sound"
+      },
+      "ui": [
+        "SoundWorkbench",
+        "PluginsPanel"
+      ]
+    },
+    {
+      "id": "interblend",
+      "name": "Chop & screw",
+      "blurb": "Merge, alternate and slow",
+      "banner": "/plugin-art/interblend.webp",
+      "open": {
+        "kind": "panel",
+        "panel": "interblend"
+      },
+      "ui": [
+        "InterblendPanel",
+        "PluginsPanel"
+      ]
+    },
+    {
+      "id": "versions",
+      "name": "Versions & recording",
+      "blurb": "Compare, choose and layer",
+      "banner": "/plugin-art/versions.webp",
+      "open": {
+        "kind": "plugin",
+        "plugin": "versions"
+      },
+      "ui": [
+        "SectionWorkbench",
+        "PluginsPanel"
+      ]
+    }
+  ]
+}
