@@ -1,7 +1,7 @@
 {
-  "name": "generative.download",
-  "short_name": "gen.download",
-  "description": "Private browser audio repair and eight-track editing.",
+  "name": "g.d lite",
+  "short_name": "g.d lite",
+  "description": "Lightweight browser audio studio: record, edit and export, privately on your device.",
   "id": "/",
   "start_url": "/",
   "scope": "/",
@@ -12,8 +12,8 @@
     "params": { "files": [{ "name": "files", "accept": ["audio/*", "video/*"] }] }
   },
   "display": "standalone",
-  "background_color": "#0a0a0d",
-  "theme_color": "#0a0a0d",
+  "background_color": "#f5f5f6",
+  "theme_color": "#f5f5f6",
   "orientation": "any",
   "categories": ["music", "utilities", "productivity"],
   "icons": [
