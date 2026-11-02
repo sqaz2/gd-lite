@@ -1,6 +1,6 @@
 importScripts("/incoming-share.js");
 const CACHE_PREFIX = "generative-download-";
-const CACHE = CACHE_PREFIX + "v5-incoming-files";
+const CACHE = CACHE_PREFIX + "v6-version-recovery";
 const APP_SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icon.svg"];
 
 self.addEventListener("install", (event) => {
@@ -15,7 +15,7 @@ self.addEventListener("activate", (event) => {
       .then((keys) => {
         // Keep one previous app cache for tabs that were already open during a
         // deployment. The new page also has one-shot stale-module recovery.
-        const previous = keys.filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE).at(-1);
+        const previous = keys.filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE).slice(-1)[0];
         return Promise.all(keys.filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE && key !== previous).map((key) => caches.delete(key)));
       }),
   );
@@ -30,6 +30,15 @@ self.addEventListener("fetch", (event) => {
   // Private API responses are never cached. Phone model parts use their own
   // hash-verified cache to avoid duplicate 67 MB copies in the app-shell cache.
   if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/models/phone-stems/")) return;
+
+  // Recovery has its own document. Never fall back to the heavy editor here.
+  if (event.request.mode === 'navigate' && url.pathname.startsWith('/versions/')) {
+    event.respondWith(fetch(event.request).then(response => {
+      if (response.ok) { const copy = response.clone(); void caches.open(CACHE).then(cache => cache.put('/versions/index.html', copy)); }
+      return response;
+    }).catch(async () => (await caches.match('/versions/index.html')) || new Response('Recovery is not cached yet. Connect once and reopen /versions/. Keep browser storage intact.', { status: 503, headers: { 'Content-Type': 'text/plain' } })));
+    return;
+  }
 
   // The embedded instrument uses stable module URLs. Refresh them together on
   // each visit; cache-first would pin an old UI/worker after an app update.
@@ -54,3 +63,4 @@ self.addEventListener("fetch", (event) => {
     return response;
   })));
 });
+

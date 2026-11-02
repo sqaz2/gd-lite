@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102024"><meta name="description" content="Choose Full, Lite or Lite2. Transfer audio and project backups, preserve the original, and recover saved work without opening the editor.">
+  <title>G.D — Choose your studio</title>
+  <script type="module" crossorigin src="/versions/assets/index-vVL3JiHZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/versions/assets/index-B1VPvaPI.css">
+</head>
+<body>
+  <header class="page-header"><a class="wordmark" href="https://generative.download/">g.d <span>YOUR STUDIO, YOUR PACE</span></a><a href="#recovery">Recovery</a></header>
+  <main>
+    <section class="intro"><p class="eyebrow">ONE SONG. THREE WAYS TO WORK.</p><h1>Make space for<br> what you’re making.</h1><p>Start light, keep shaping, or open the full studio. Choose the tools that fit your session and your device.</p></section>
+    <section class="editions" aria-label="Choose a studio version">
+      <article class="edition"><span class="tag">THE SIMPLE SESSION</span><h2>Lite</h2><p class="lead">Record a voice. Build around a beat.</p><p>Four tracks, a clear waveform, and the essentials: trim, split, move, fades, levels, mute, solo and undo.</p><ul><li>Smallest editor download and simplest layout</li><li>Dry microphone recording and WAV export</li><li>Lyrics, local saving and portable Lite backups</li></ul><p class="limit">Best for quick takes and simple songs. Up to 10 minutes; decoded audio uses device storage. No live effects or stem models.</p><a class="button" data-editor="lite" href="https://generative.download/lite/">Open Lite</a></article>
+      <article class="edition featured"><span class="tag">MORE ROOM TO ARRANGE</span><h2>Lite2</h2><p class="lead">Shape a fuller mix. Keep more control.</p><p>Eight tracks with the familiar studio timeline, row effects, pan, tempo and more detailed recording controls.</p><ul><li>More editing and mixing tools than Lite</li><li>24-bit WAV and MP3 export</li><li>Compressed originals with audio decoded as needed</li></ul><p class="limit">Best for detailed audio arrangements and longer songs. A larger editor download than Lite. Device storage and browser codecs still matter.</p><a class="button" data-editor="lite2" href="https://lite2.pages.dev/mix">Open Lite2</a></article>
+      <article class="edition"><span class="tag">THE COMPLETE WORKSPACE</span><h2>Full</h2><p class="lead">Repair, remix and finish.</p><p>The full generative.download studio, including advanced sound tools, stem separation, instruments and video workflows.</p><ul><li>Broadest effects and repair options</li><li>Audio and video workspaces</li><li>Keep the original editable project here</li></ul><p class="limit">Best for processing and finishing. Heavy tools need more resources; connected processing requires a network connection.</p><a class="button" data-editor="full" href="https://generative.download/mix">Open full studio</a></article>
+    </section>
+    <section class="transfer panel" id="transfer" aria-labelledby="transfer-title">
+      <div><p class="eyebrow">TAKE YOUR SONG WITH YOU</p><h2 id="transfer-title">Open or transfer a project</h2><p>Choose a saved project or an audio file, <code>.gdlproject</code> backup, or <code>.gdlite</code> backup. Files are processed on this device.</p></div>
+      <div class="transfer-grid">
+        <div><label for="saved">Saved on this site</label><select id="saved"><option value="">Choose a saved project…</option></select><button id="refresh" class="subtle" type="button">Refresh saved projects</button><p id="catalog-note" class="small">Reading saved projects…</p>
+          <label for="file">Or open a file</label><input id="file" type="file" accept="audio/*,.wav,.mp3,.m4a,.aac,.flac,.ogg,.opus,.webm,.gdlproject,.gdlite"><p id="chosen" class="small">Your current editor can stay open while you prepare a copy.</p>
+        </div>
+        <div><label for="target">Continue in</label><select id="target"><option value="lite">Lite · four tracks</option><option value="lite2">Lite2 · eight tracks</option><option value="full">Full studio</option></select>
+          <p class="transfer-rule"><b>Keep the sound.</b> Cross-version projects become one mixed audio track with audible effects, levels, fades and tails rendered into the file. Muted tracks stay out of that mix. Individual effects and rows cannot be edited in the rendered copy.</p>
+          <p class="small">Native Lite → Lite and full-project → Full transfers keep their editable project format. The original project stays saved. Keep its backup to return to the original rows, muted material, video and other project data.</p>
+          <div class="actions"><button id="prepare" class="primary" type="button" disabled>Prepare transfer</button><button id="backup" type="button" disabled>Back up original</button></div>
+        </div>
+      </div>
+      <section id="progress-panel" class="progress-panel" hidden aria-label="Transfer progress"><p id="status" role="status" aria-live="polite"></p><progress id="progress" max="1"></progress><div class="actions"><button id="cancel" type="button">Cancel transfer</button><a href="?recover=1" target="_blank" rel="noopener">Open recovery separately</a></div><p id="stalled" class="small" hidden>No progress update for a while. You can cancel and retry, or open recovery. The original is still saved.</p></section>
+      <p id="error" role="alert" hidden></p>
+      <section id="result" class="result" hidden><h3 id="result-title">Your transfer is ready</h3><p id="result-note"></p><audio id="audition" controls preload="none" hidden></audio><div id="downloads" class="actions"></div><div class="actions"><button id="open-copy" class="primary" type="button" hidden>Save copy for this studio</button><a id="destination" class="button" hidden>Open destination</a></div></section>
+    </section>
+    <section class="panel" id="recovery"><p class="eyebrow">GET BACK TO MAKING</p><h2>If loading or editing freezes</h2><ol><li><b>If this page still responds:</b> cancel the transfer and retry. Use “Back up original” before a bigger change.</li><li><b>If the editor stops responding:</b> open this recovery page in a new tab. Choose a saved project above, download its backup, or prepare a Lite copy.</li><li><b>If the entire tab is frozen:</b> use the browser’s address bar to open <strong>/versions/</strong> on the same site. A frozen tab cannot run its own recovery button. Reload only after allowing any active save to finish.</li><li><b>Keep browser storage:</b> do not clear site data to fix a freeze. Recovery can read completed saves; edits and microphone samples that never reached storage cannot be recovered.</li></ol><p>Lite and the full studio share a site. Lite2 lives on another site, so its local projects are separate. Moving between sites uses a downloaded transfer file: save it, open the destination’s transfer page, then choose that file.</p><p class="small">A damaged backup, unsupported codec, exhausted storage or Lite’s 10-minute limit will show an error instead of silently dropping audio. Use Lite2 or Full for longer songs. Actual recording and playback depend on the phone and browser; these editions are not a guarantee for every older device.</p><div class="actions"><a class="button" href="https://generative.download/versions/?recover=1">Main / Lite recovery</a><a class="button" href="https://lite2.pages.dev/versions/?recover=1">Lite2 recovery</a></div></section>
+    <footer>Record clean takes. Keep the original. Choose the studio that fits.</footer>
+  </main>
+  <noscript><p>This guide works without JavaScript. Enable JavaScript to read saved projects or transfer files. The studio links above remain available.</p></noscript>
+</body>
+</html>
